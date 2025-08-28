@@ -1,7 +1,4 @@
 # CookShelf
-#### Video Demo:
-
-#### Description:
 
 CookShelf is a personal digital recipe manager built using Python(Flask), HTMl, CSS, JavaScript, and SQLite. It allows users to securely register, log in, and create, view, and organize their favorite recipes in a clean and intuitive interface. Insprired by the simplicity and warmth of Scandinavian design, CookShelf is both functionally and visually tailored to make recipe saving feel personal and cozy.
 
