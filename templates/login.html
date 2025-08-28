@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <div class="recipe-card">
+        <h2 class="mb--4 text-start">Log In</h2>
+
+        <form action="/login" method="post">
+            <div class="mb-3 text-start">
+                <label for="username" class="form-label">Username</label>
+                <input autocomplete="off" autofocus class="form-control" name="username" id="username" placeholder="Username" type="text" required>
+            </div>
+
+            <div class="mb-3 text-start">
+                <label for="password" class="form-label">Password</label>
+                <input class="form-control" name="password" id="password" placeholder="Password" type="password" required>
+            </div>
+
+            <div class="text-end">
+                <button class="btn btn-primary btn-sm mt-3 w-100" type="submit">Log In</button>
+            </div>
+        </form>
+
+        <p class="text-center mt-3">Don't have an account? <a href="/register">Create here</a></p>
+    </div>
+{% endblock %}

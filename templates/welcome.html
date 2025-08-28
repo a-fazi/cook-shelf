@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome
+{% endblock %}
+
+{% block main %}
+    <div class="text-center">
+        <h1 class="mb-4">🍽️ Welcome to CookShelf</h1>
+        <p class="lead">Store and organize your favorite recipes, categorize them, and access them anywhere.</p>
+        <p class="mt-3">Sing up and start building your personal digital cookbook!</p>
+        <div class="mt-4">
+            <a href="/register" class="btn btn-success btn-lg me-2">Get Started</a>
+            <a href="/login" class="btn btn-outline-primary btn-lg">Log In</a>
+        </div>
+    </div>
+
+{% endblock %}

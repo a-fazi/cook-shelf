@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ recipe.title }}
+{% endblock %}
+
+{% block main %}
+    <div class="recipe-card text-start">
+
+        <h2>{{ recipe.title }}</h2>
+
+        <p><strong>Category:</strong> {{ recipe.category or "Uncategorized" }}</p>
+        <p><strong>Cooking Time:</strong> {{ recipe.cooking_time or "?" }} minutes</p>
+        <p><strong>Difficulty:</strong>{{ recipe.difficulty }}</p>
+
+        <hr>
+
+        <h4>Ingredients:</h4>
+        <pre>{{ recipe.ingredients }}</pre>
+
+        <h4 class="mb-3">Instructions:</h4>
+        <pre>{{ recipe.instructions }}</pre>
+
+        <a href="/" class="btn btn-sm btn-outline-secondary mt-4">← Back to Recipes</a>
+    </div>
+{% endblock %}

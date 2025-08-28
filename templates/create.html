@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Recipe
+{% endblock %}
+
+{% block main %}
+    <div class="recipe-card">
+        <h2 class="mb-4 text-start">Add a New Recipe</h2>
+
+        <form action="/create" method="post">
+            <div class="mb-3 text-start">
+              <label for="title" class="form-label">Title</label>
+              <input autocomplete="off" autofocus class="form-control" name="title" id="title" placeholder="e.g. Pasta, Cherry Pie" type="text" required>
+            </div>
+
+            <div class="mb-3 text-start">
+              <label for="ingredients" class="form-label">Ingredients</label>
+              <textarea class="form-control" name="ingredients" id="ingredients" placeholder="List the ingredients..." rows="4" required></textarea>
+            </div>
+
+            <div class="mb-3 text-start">
+              <label for="instructions" class="form-label">Instructions</label>
+              <textarea class="form-control" name="instructions" id="instructions" placeholder="Step-by-step instructions..." rows="4" required></textarea>
+            </div>
+
+            <div class="container-fluid px-0">
+              <div class="row g-3 mb-3 text-start">
+                <div class="col-12 col-lg-6">
+                  <label for="category" class="form-label">Category</label>
+                  <input class="form-control" name="category" id="category" type="text" placeholder="e.g. Dessert, Snack">
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <label for="cooking_time" class="form-label">Cooking Time</label>
+                    <input class="form-control" name="cooking_time" id="cooking_time" placeholder="minutes" style="width: 100px;" type="number" min="1">
+                </div>
+
+
+                <div class="col-12 col-lg-3">
+                  <label for="difficulty" class="form-label">Difficulty</label>
+                  <select class="form-select" name="difficulty" id="difficulty" required>
+                    <option value="">Select Difficulty</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-end">
+              <button class="btn btn-primary btn-sm mt-3" type="submit">Save Recipe</button>
+            </div>
+          </form>
+
+    </div>
+{% endblock %}
